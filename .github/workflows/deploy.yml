@@ -21,9 +21,10 @@ jobs:
           aws-region: ap-southeast-2
 
       - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation \
-          --distribution-id E116X0M7QP9Z7Y
-          --paths "/*"
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E116X0M7QP9Z7Y \
+            --paths "/*"
 
       - name: Upload to S3
         run: |
