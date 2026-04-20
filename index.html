@@ -5,7 +5,10 @@
   <title>Sophie | Cloud Engineer ☁️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,7 +25,7 @@
     </p>
   </header>
 
-  <!-- FEATURED PROJECT -->
+  <!-- PROJECTS -->
   <section class="projects">
     <h2>🚀 Featured Project</h2>
 
@@ -33,6 +36,13 @@
       <p><strong>Solution:</strong> Built a static site using AWS S3 with GitHub Actions CI/CD.</p>
       <p><strong>Result:</strong> Automated deployments with HTTPS via CloudFront and domain via Cloudflare.</p>
 
+      <!-- LINKS -->
+      <div class="project-links">
+        <a href="#">🌍 Live Site</a>
+        <a href="https://github.com/User10538">💻 GitHub</a>
+      </div>
+
+      <!-- TAGS -->
       <div class="tags">
         <span>☁️ AWS</span>
         <span>⚙️ CI/CD</span>
@@ -42,29 +52,24 @@
     </div>
   </section>
 
-<div class="project-links">
-  <a href="#">🌍 Live Site</a>
-  <a href="#">💻 GitHub</a>
-</div>
-
   <!-- ARCHITECTURE -->
-<section class="architecture">
-  <h2>☁️ How It Works</h2>
+  <section class="architecture">
+    <h2>☁️ How It Works</h2>
 
-  <p class="arch-desc">
-    This project uses a simple but powerful cloud architecture:
-  </p>
+    <p class="arch-desc">
+      This project uses a simple but powerful cloud architecture:
+    </p>
 
-  <div class="diagram">
-    <div>User 🌍</div>
-    <div>↓</div>
-    <div>Cloudflare 🌐</div>
-    <div>↓</div>
-    <div>CloudFront ⚡</div>
-    <div>↓</div>
-    <div>S3 Bucket 📦</div>
-  </div>
-</section>
+    <div class="diagram">
+      <div>User 🌍</div>
+      <div>↓</div>
+      <div>Cloudflare 🌐</div>
+      <div>↓</div>
+      <div>CloudFront ⚡</div>
+      <div>↓</div>
+      <div>S3 Bucket 📦</div>
+    </div>
+  </section>
 
   <!-- APPROACH -->
   <section class="approach">
@@ -111,22 +116,23 @@
     <p>Made with ☁️ + ✨ by Sophie</p>
   </footer>
 
+  <!-- SCROLL ANIMATION -->
   <script>
-  const elements = document.querySelectorAll("section");
+    const elements = document.querySelectorAll("section");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
     });
-  });
 
-  elements.forEach(el => {
-    el.classList.add("fade-in");
-    observer.observe(el);
-  });
-</script>
+    elements.forEach(el => {
+      el.classList.add("fade-in");
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
