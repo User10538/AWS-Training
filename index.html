@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sophie World</title>
+  <title>Sophie | Cloud Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font -->
@@ -14,49 +14,77 @@
 
 <body>
 
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="logo">Sophie ☁️</div>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <header class="hero">
-    <h1>Hi, I’m <span>Sophie</span> ✨</h1>
-    <p>Aspiring Cloud Engineer ☁️</p>
+    <div class="container">
+      <h1>Hi, I’m <span>Sophie</span> ✨</h1>
+      <p>Aspiring Cloud Engineer building real-world AWS projects ☁️</p>
+    </div>
   </header>
 
   <!-- PROJECTS -->
-  <section class="projects">
-    <h2>✨ Projects</h2>
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>🚀 Featured Project</h2>
 
-    <div class="project-card">
-      <h3>AWS Static Website + CI/CD</h3>
-      <p>
-        Built a static website hosted on AWS S3 with a CI/CD pipeline using GitHub Actions.
-        Configured CloudFront with HTTPS and custom domain using Cloudflare.
-      </p>
+      <div class="project-card">
+        <h3>AWS Static Website + CI/CD</h3>
+        <p>
+          Built a static website hosted on AWS S3 with a CI/CD pipeline using GitHub Actions.
+          Configured CloudFront for HTTPS and performance, and integrated Cloudflare for DNS and domain management.
+        </p>
+
+        <div class="project-links">
+          <a href="#">Live Demo →</a>
+          <a href="#">GitHub →</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="about">
-    <h2>💻 Skills</h2>
-    <div class="skills">
-      <span>AWS (S3, CloudFront, IAM)</span>
-      <span>Git & GitHub</span>
-      <span>CI/CD (GitHub Actions)</span>
-      <span>DNS & Cloudflare</span>
-      <span>Terraform (IaC)</span>
+  <section id="skills" class="about">
+    <div class="container">
+      <h2>💻 Skills</h2>
+
+      <div class="skills">
+        <span>AWS (S3, CloudFront, IAM)</span>
+        <span>Git & GitHub</span>
+        <span>CI/CD</span>
+        <span>Cloudflare</span>
+        <span>Terraform</span>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="contact">
-    <h2>💡 About Me</h2>
-    <p>
-      I am an aspiring cloud engineer with hands-on experience deploying and automating cloud infrastructure.
-      I enjoy learning how systems work together and building real-world solutions.
-    </p>
+  <section id="about" class="contact">
+    <div class="container">
+      <h2>💡 About Me</h2>
+      <p class="about-text">
+        I am an aspiring cloud engineer with hands-on experience deploying and automating cloud infrastructure.
+        I enjoy understanding how systems connect and building practical, real-world solutions.
+      </p>
+
+      <div class="cta">
+        <a href="mailto:you@email.com">Let’s work together 🚀</a>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Sophie website</p>
+    <p>© 2026 Sophie</p>
   </footer>
 
 </body>
