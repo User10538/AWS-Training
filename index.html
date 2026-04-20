@@ -42,6 +42,30 @@
     </div>
   </section>
 
+<div class="project-links">
+  <a href="#">🌍 Live Site</a>
+  <a href="#">💻 GitHub</a>
+</div>
+
+  <!-- ARCHITECTURE -->
+<section class="architecture">
+  <h2>☁️ How It Works</h2>
+
+  <p class="arch-desc">
+    This project uses a simple but powerful cloud architecture:
+  </p>
+
+  <div class="diagram">
+    <div>User 🌍</div>
+    <div>↓</div>
+    <div>Cloudflare 🌐</div>
+    <div>↓</div>
+    <div>CloudFront ⚡</div>
+    <div>↓</div>
+    <div>S3 Bucket 📦</div>
+  </div>
+</section>
+
   <!-- APPROACH -->
   <section class="approach">
     <h2>🌱 My Approach</h2>
@@ -86,6 +110,23 @@
   <footer>
     <p>Made with ☁️ + ✨ by Sophie</p>
   </footer>
+
+  <script>
+  const elements = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  elements.forEach(el => {
+    el.classList.add("fade-in");
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
