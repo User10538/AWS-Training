@@ -14,3 +14,31 @@
   font-size: 0.9rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
+
+.hero {
+  background: linear-gradient(180deg, #fdf2ff, #eef7ff);
+}
+
+.project-card {
+  border-radius: 18px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.about {
+  background: #f9f7ff;
+}
+
+.contact {
+  background: #f0f7ff;
+}
+
+section {
+  padding: 100px 20px;
+}
