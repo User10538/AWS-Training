@@ -155,7 +155,15 @@ h2 {
   flex: 1 1 400px;
   max-width: 500px;
 }
+.projects-container {
+  align-items: stretch;
+}
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .fade-in {
   opacity: 0;
