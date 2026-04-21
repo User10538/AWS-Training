@@ -142,6 +142,20 @@ h2 {
 .project-links a:hover {
   opacity: 0.7;
 }
+/* Feasure project layouts
+*/
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
 
 .fade-in {
   opacity: 0;
