@@ -71,11 +71,13 @@
   <div class="project-card">
     <h3>🔐 AWS Serverless Contact Form API</h3>
 
-    <p><strong>Problem:</strong> Needed a scalable and secure way to handle contact form submissions from a static website without running servers.</p>
-    <p><strong>Solution:</strong> Built a serverless backend using Amazon API Gateway and AWS Lambda (Python), integrated with a static frontend hosted on Amazon S3 and delivered via Amazon CloudFront. 
-      Implemented proper CORS configuration and handled JSON requests securely.</p>
-    <p><strong>Result:</strong> Delivered a fully scalable, serverless contact form with 
-      real-time processing, no infrastructure management, and architecture aligned with AWS best practices.</p>
+    <p><strong>Problem:</strong> Needed a scalable and secure way to handle contact form submissions from a static website and 
+      deliver messages via email without managing servers.</p>
+    <p><strong>Solution:</strong> Built a serverless architecture using Amazon API Gateway and AWS Lambda (Python) to process form submissions, 
+      integrated with a static frontend hosted on Amazon S3 and delivered via Amazon CloudFront. Configured CORS for browser-based requests, 
+      implemented input validation, and integrated Amazon SES with a custom domain to send transactional emails.</p>
+    <p><strong>Result:</strong> Delivered a fully serverless, production-style contact system capable of real-time email notifications using a
+       custom domain, with no infrastructure to manage and aligned with AWS best practices for scalability, security, and reliability.</p>
 
     <div class="tags">
       <span>☁️ AWS</span>
@@ -83,6 +85,7 @@
       <span>🌐 API Gateway</span>
       <span>🐍 Python </span>
       <span>🚀 CloudFront</span>
+      <span>💌  SES</span>
     </div>
     <div class="project-links">
       <a href="https://sophieworld.atlassian.net/wiki/external/YTQ1YmYyOWI2MWUzNGM2OGJiYjJjZmY1Y2RmMjhlNWE">💻 This Project Troubleshooting Guide</a>
