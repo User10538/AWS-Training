@@ -21,22 +21,27 @@
       <span>simple, reliable & fun ☁️</span>
     </h1>
     <p class="tagline">
-      Contact Me✨
+      Aspiring Cloud Engineer who enjoys turning ideas into real systems ✨
     </p>
   </header>
 
   <!-- ACTUAL CONTACT FORM -->
-  <form id="contactForm">
-    <input type="text" name="name" placeholder="Your Name" required />
 
-    <input type="email" name="email" placeholder="Your Email" required /><br><br>
+    <section class="projects">
+    <h2>💌 Contact ME</h2>
 
-    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+<div class="projects-container">
 
-    <button type="submit">Send</button>
-  </form>
-
-  <p id="responseMsg"></p>
+  <div class="project-card">
+    <h3>Contact Me Form/h3>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required /><br><br>
+          <textarea name="message" placeholder="Your Message" required aria-setsize="32"></textarea><br><br>
+              <button type="submit">Send</button>
+            </form>
+            
+            <p id="responseMsg"></p>
 
   <script>
     const form = document.getElementById("contactForm");
@@ -81,6 +86,29 @@
       } catch (err) {
         responseMsg.innerText = "❌ Something went wrong";
       }
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with ☁️ + ✨ by Sophie</p>
+  </footer>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const elements = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach(el => {
+      el.classList.add("fade-in");
+      observer.observe(el);
     });
   </script>
 
