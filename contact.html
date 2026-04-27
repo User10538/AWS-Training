@@ -8,7 +8,7 @@
   <h2>Contact Me</h2>
 
   <form id="contactForm">
-    <input type="text" name="name" placeholder="Your Name" /><br><br>
+    <input type="text" name="name" placeholder="Your Name" required />
 
     <input type="email" name="email" placeholder="Your Email" required /><br><br>
 
@@ -43,7 +43,14 @@
           body: JSON.stringify(data)
         });
 
-        const result = await res.json();
+        const text = await res.text();
+        let result;
+
+        try {
+          result = JSON.parse(text);
+        } catch {
+          result = { error: text };
+        }
 
         if (res.status === 200) {
           responseMsg.innerText = "✅ Message sent!";
