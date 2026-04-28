@@ -76,36 +76,58 @@
   </div>
 
   <div class="project-card">
-    <h3>💌 AWS Serverless Contact Form API</h3>
+    <h3> Secure Backend API (Serverless Authentication)</h3>
 
-    <p><strong>Problem:</strong> Needed a scalable and secure way to handle contact form submissions from a static website and 
-      deliver messages via email without managing servers.</p>
-    <p><strong>Solution:</strong> Built a serverless architecture using Amazon API Gateway and AWS Lambda (Python) to process form submissions, 
-      integrated with a static frontend hosted on Amazon S3 and delivered via Amazon CloudFront. Configured CORS for browser-based requests, 
-      implemented input validation, and integrated Amazon SES with a custom domain to send transactional emails.</p>
-    <p><strong>Result:</strong> Delivered a fully serverless, production-style contact system capable of real-time email notifications using a
-       custom domain, with no infrastructure to manage and aligned with AWS best practices for scalability, security, and reliability.</p>
+    <p><strong>Problem:</strong> The contact form API was publicly accessible, allowing anyone to send 
+      requests—leading to potential spam, abuse, and unnecessary costs.</p>
+    <p><strong>Solution:</strong> Implemented authentication using Amazon Cognito and secured the API with a JWT authorizer in Amazon API
+       Gateway. Configured Cognito’s hosted login to issue JWT tokens and enforced token validation before requests reach AWS Lambda. 
+       Updated the frontend to include Bearer tokens in API requests and handled request validation and processing securely, maintaining email delivery via Amazon SES.</p>
+    <p><strong>Result:</strong> Transformed a public API into a secure, authenticated backend where only authorized users can submit requests, 
+      preventing unauthorized access and abuse. Established a production-ready, identity-aware serverless architecture aligned with AWS security best practices.</p>
 
     <div class="tags">
       <span>☁️ AWS</span>
-      <span>⚡ Serverless</span>
+      <span>🔐 Security</span>
       <span>🌐 API Gateway</span>
-      <span>🐍 Python </span>
+      <span>🧑‍💻 Serverless</span>
       <span>🚀 CloudFront</span>
-      <span>💌  SES</span>
+      <span>🎟 JWT</span>
+      <span>⚙️ Lambda</span>
+      <span>🧠 Cognito</span>
+      <span>🔄 OAuth2</span>
+      <span>🛡️ Cloud Security</span>
     </div>
     <div class="project-links">
       <a href="https://sophieworld.atlassian.net/wiki/external/YTQ1YmYyOWI2MWUzNGM2OGJiYjJjZmY1Y2RmMjhlNWE">💻 This Project Troubleshooting Guide</a>
     </div>
   </div>
+
+<div class="project-card">
+    <h3>🔐 Secure AWS Static Website</h3>
+
+    <p><strong>Problem:</strong> Public websites are vulnerable to attacks and misconfigured access.</p>
+    <p><strong>Solution:</strong> Secured infrastructure using private S3, CloudFront with Origin Access Control, and AWS WAF.</p>
+    <p><strong>Result:</strong> Protected against direct access and common web attacks with rate limiting.</p>
+
+    <div class="tags">
+      <span>🔒 Security</span>
+      <span>AWS WAF</span>
+      <span>CloudFront</span>
+      <span>S3</span>
+    </div>
+       <div class="project-links">
+      <a href="https://sophieworld.atlassian.net/wiki/external/YTQ1YmYyOWI2MWUzNGM2OGJiYjJjZmY1Y2RmMjhlNWE">💻 This Project Troubleshooting Guide</a>
+    </div>
+  </div>
+
    
 </div>
-
 </div>
 
   </section>
-
-  <!-- ARCHITECTURE -->
+<!-- 
+  ARCHITECTURE
   <section class="architecture">
     <h2>☁️ How It Works</h2>
 
@@ -139,7 +161,7 @@
     <div>📦 S3 (Private)</div>
   </div>
     
-  </section>
+  </section> -->
 
   <!-- APPROACH -->
   <section class="approach">
