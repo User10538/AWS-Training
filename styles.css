@@ -97,6 +97,52 @@ body::after {
 }
 
 /* =========================================
+   TOP NAV LINKS
+========================================= */
+
+.top-links {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  padding: 18px 22px;
+
+  z-index: 2000;
+
+  backdrop-filter: blur(14px);
+
+  background:
+    rgba(15,16,32,0.75);
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.top-links a {
+  color: var(--text);
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.top-links a:hover {
+  opacity: 0.7;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
    TYPOGRAPHY
 ========================================= */
 
@@ -110,12 +156,15 @@ h4 {
 
 h1 {
   font-size: clamp(3rem, 7vw, 5.5rem);
+
   line-height: 0.95;
+
   font-weight: 800;
 }
 
 h2 {
   font-size: clamp(2rem, 5vw, 3rem);
+
   margin-bottom: 18px;
 }
 
@@ -125,6 +174,7 @@ h3 {
 
 p {
   color: var(--muted);
+
   font-size: 1rem;
 
   max-width: 70ch;
@@ -148,63 +198,10 @@ section {
 
 .container {
   width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
 
-/* =========================================
-   NAVBAR
-========================================= */
-
-.navbar {
-  position: sticky;
-  top: 0;
-
-  z-index: 1000;
-
-  backdrop-filter: blur(14px);
-
-  background:
-    rgba(15,16,32,0.7);
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.06);
-}
-
-.nav-container {
   max-width: var(--max-width);
 
   margin: 0 auto;
-
-  padding: 18px 24px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-weight: 800;
-  font-size: 1.1rem;
-
-  color: white;
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
-}
-
-.nav-links a {
-  color: var(--muted);
-
-  font-weight: 500;
-
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: white;
 }
 
 /* =========================================
@@ -212,8 +209,10 @@ section {
 ========================================= */
 
 .hero {
-  padding: 160px 24px 120px;
+  padding: 220px 24px 120px;
+
   text-align: center;
+
   position: relative;
 }
 
@@ -221,6 +220,7 @@ section {
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   background:
@@ -235,9 +235,11 @@ section {
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   max-width: 950px;
+
   margin: 0 auto;
 }
 
@@ -272,6 +274,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 16px;
+
   flex-wrap: wrap;
 }
 
@@ -281,6 +284,7 @@ section {
 
 .button {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -315,9 +319,11 @@ section {
 }
 
 .button-secondary {
-  background: rgba(255,255,255,0.04);
+  background:
+    rgba(255,255,255,0.04);
 
-  border: 1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   color: var(--text);
 
@@ -325,23 +331,8 @@ section {
 }
 
 .button-secondary:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-/* =========================================
-   SECTION HEADERS
-========================================= */
-
-.section-header {
-  margin-bottom: 60px;
-}
-
-.section-header h2 {
-  margin-bottom: 14px;
-}
-
-.section-header p {
-  max-width: 700px;
+  background:
+    rgba(255,255,255,0.08);
 }
 
 /* =========================================
@@ -362,7 +353,8 @@ section {
 
   backdrop-filter: blur(14px);
 
-  border: 1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius: var(--radius);
 
@@ -426,7 +418,9 @@ section {
 
 .tags {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 10px;
 }
 
@@ -444,6 +438,7 @@ section {
   border-radius: 10px;
 
   font-size: 0.82rem;
+
   font-weight: 500;
 
   font-family:
@@ -452,11 +447,12 @@ section {
 }
 
 /* =========================================
-   LINKS
+   PROJECT LINKS
 ========================================= */
 
 .project-links {
   display: flex;
+
   gap: 18px;
 
   margin-top: auto;
@@ -467,68 +463,12 @@ section {
 
   font-weight: 600;
 
-  transition: opacity 0.2s ease;
+  transition:
+    opacity 0.2s ease;
 }
 
 .project-links a:hover {
   opacity: 0.7;
-}
-
-/* =========================================
-   ARCHITECTURE SECTION
-========================================= */
-
-.architecture {
-  position: relative;
-}
-
-.architecture::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.02),
-      transparent
-    );
-
-  pointer-events: none;
-}
-
-.arch-desc {
-  margin-bottom: 40px;
-}
-
-.diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 16px;
-}
-
-.diagram div {
-  background:
-    rgba(255,255,255,0.05);
-
-  backdrop-filter: blur(12px);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  border-radius: 14px;
-
-  padding: 16px 24px;
-
-  min-width: 240px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.2);
-
-  font-weight: 600;
 }
 
 /* =========================================
@@ -541,7 +481,9 @@ section {
 
 .skills {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 14px;
 }
 
@@ -664,6 +606,7 @@ footer {
 
 .fade-in.show {
   opacity: 1;
+
   transform: translateY(0);
 }
 
@@ -672,16 +615,18 @@ footer {
 ========================================= */
 
 @media (max-width: 768px) {
+
   section {
     padding: 72px 20px;
   }
 
   .hero {
-    padding: 130px 20px 90px;
+    padding: 180px 20px 90px;
   }
 
   .hero-buttons {
     flex-direction: column;
+
     align-items: center;
   }
 
@@ -693,11 +638,15 @@ footer {
     padding: 26px;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   h1 {
     line-height: 1;
+  }
+
+  .top-links {
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    padding: 14px;
   }
 }
