@@ -479,24 +479,20 @@ section {
 .project-links a:hover {
   opacity: 0.7;
 }
-
 /* =========================================
-   SKILLS
+   CERTIFICATES
 ========================================= */
 
-.skills-section {
-  position: relative;
+.cert-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 20px;
 }
 
-.skills {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 14px;
-}
-
-.skills span {
+.cert-card {
   background:
     rgba(255,255,255,0.05);
 
@@ -505,9 +501,9 @@ section {
 
   backdrop-filter: blur(12px);
 
-  padding: 12px 16px;
+  border-radius: 18px;
 
-  border-radius: 12px;
+  padding: 24px;
 
   color: #dbe7ff;
 
@@ -515,18 +511,14 @@ section {
 
   transition:
     transform 0.2s ease,
-    background 0.2s ease;
-
-  font-family:
-    'JetBrains Mono',
-    monospace;
+    border-color 0.2s ease;
 }
 
-.skills span:hover {
-  transform: translateY(-3px);
+.cert-card:hover {
+  transform: translateY(-4px);
 
-  background:
-    rgba(255,255,255,0.08);
+  border-color:
+    rgba(139,92,246,0.35);
 }
 
 /* =========================================
