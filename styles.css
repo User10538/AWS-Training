@@ -101,13 +101,11 @@ body::after {
 ========================================= */
 
 .top-links {
-  position: fixed;
-
+ position: fixed;
   top: 0;
   left: 0;
-
-  width: 100%;
-
+  right: 0;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,8 +113,6 @@ body::after {
   gap: 24px;
 
   padding: 18px 24px;
-
-  background: red !important;
 
   z-index: 9999;
 
@@ -361,8 +357,7 @@ color: transparent;
 
   position: relative;
 
-  overflow: hidden;
-}
+  }
 
 .project-card::before {
   content: "";
