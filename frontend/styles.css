@@ -865,3 +865,41 @@ footer {
   background:
     rgba(255,255,255,0.08);
 }
+
+
+
+/* =========================================
+   FEATURE PROJECT
+========================================= */
+
+.featureProject-card {
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  padding: 34px;
+
+  text-align: left; /* changed */
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.featureProject-card p {
+  margin: 0 0 30px; /* changed */
+
+  max-width: 700px;
+}
+
+.featureProject-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start; /* changed */
+
+  gap: 14px;
+}
