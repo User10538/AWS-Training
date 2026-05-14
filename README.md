@@ -1,40 +1,84 @@
-Overview
+AWS Cloud & Security Engineering Projects
 
-I designed and built a secure, cloud-native contact system using AWS serverless services. The goal was to create a scalable and production-ready solution that not only handles user submissions but also enforces strong security controls across multiple layers.
+Cloud-native AWS projects focused on secure infrastructure, serverless architecture, CI/CD automation, and cloud security engineering.
 
-Problem
+This repository contains hands-on projects built to strengthen practical experience across AWS services, secure backend development, infrastructure automation, and operational monitoring systems.
 
-The initial contact form API was publicly accessible, meaning anyone could send requests. This created risks around spam, abuse, and unnecessary cost, and lacked visibility and persistence for submitted messages.
+Core Focus Areas
+Serverless Architecture
+Secure API Design
+AWS Cloud Security
+IAM Least-Privilege Access Control
+CI/CD Automation
+Infrastructure as Code (Terraform)
+Cloud Monitoring & Telemetry
+Edge Security with CloudFront & AWS WAF
+Featured Projects
+Secure Serverless Backend API
 
-Solution
+Designed and secured a serverless backend API using Amazon Cognito and API Gateway JWT authorization to enforce authenticated access across protected routes. Implemented token validation prior to Lambda execution and integrated Amazon SES for secure server-side email processing.
 
-I implemented a secure, serverless architecture using Amazon Cognito, Amazon API Gateway, and AWS Lambda to enforce authentication and process requests.
+Technologies:
+Amazon Cognito • API Gateway • AWS Lambda • JWT • OAuth 2.0 • Amazon SES • CloudFront
 
-User authentication is handled via Cognito’s hosted login, issuing JWT tokens that are validated by API Gateway before any request reaches the backend. The Lambda function processes validated requests, stores submissions in Amazon DynamoDB, and sends email notifications using Amazon SES.
+AWS Serverless Security Monitoring Dashboard
 
-To further strengthen security, I implemented geographic access control using AWS WAF, restricting access to Australian traffic only. IAM roles were configured with least-privilege permissions to tightly control service interactions, and logging was enabled through Amazon CloudWatch for debugging and monitoring.
+Designed and deployed a serverless security monitoring platform on AWS using API Gateway, Lambda, and DynamoDB to collect and visualize security telemetry in real time. Implemented event-driven ingestion pipelines, IAM least-privilege access controls, and CloudFront-based HTTPS delivery.
 
-Architecture
-User → CloudFront → AWS WAF → Cognito → API Gateway → Lambda → DynamoDB + SES
-Key Features
-🔐 JWT-based authentication using Cognito
-🛡️ API protection with API Gateway authorizer
-🌍 Geo-restriction via AWS WAF (Australia-only access)
-⚙️ Serverless backend with Lambda (Python)
-🗄️ Persistent storage with DynamoDB
-📬 Email notifications using SES
-📊 Logging and debugging with CloudWatch
-🔑 IAM least-privilege access control
-Challenges & What I Learned
+Technologies:
+AWS Lambda • API Gateway • DynamoDB • Amazon S3 • CloudFront • IAM • Cloudflare • Python • JavaScript
 
-This project involved debugging across multiple AWS services, including handling CORS issues, resolving Lambda runtime errors, configuring IAM permissions, and understanding OAuth flows (authorization code vs implicit grant). Implementing JWT authentication and integrating it with API Gateway required careful configuration, particularly around token handling and request validation.
+Secure AWS Static Website Architecture
 
-I also gained hands-on experience designing secure architectures, applying least-privilege access, and layering security controls using both identity-based and network-level protections.
+Implemented a hardened static website architecture using private Amazon S3, CloudFront Origin Access Control (OAC), and AWS WAF. Applied edge-layer protections including rate limiting and managed rule sets to reduce origin exposure and mitigate common web threats.
 
-Result
+Technologies:
+AWS WAF • CloudFront • Amazon S3 • OAC • Terraform
 
-The system evolved from a public API into a secure, production-style backend where only authenticated users can submit requests. Messages are reliably stored and processed, and unauthorized or out-of-region traffic is blocked at the edge. The final architecture is scalable, maintainable, and aligned with AWS best practices for security and serverless design.
+AWS Static Website + CI/CD Pipeline
 
-Tech Stack
+Designed and deployed a static web platform on AWS using S3 and CloudFront, with automated CI/CD workflows through GitHub Actions. Implemented HTTPS, custom domain integration via Cloudflare, and infrastructure automation using Terraform.
 
-☁️ AWS · 🔐 Cognito · 🧾 API Gateway · ⚙️ Lambda · 🗄️ DynamoDB · 📬 SES · 🛡️ WAF · 🌐 CloudFront · 📦 S3 · 📊 CloudWatch · 🔑 IAM
+Technologies:
+AWS • GitHub Actions • CloudFront • Cloudflare • Terraform
+
+Serverless Contact Form API
+
+Developed a secure serverless contact form platform using API Gateway, AWS Lambda, and Amazon SES for scalable email delivery. Implemented CORS handling, input validation, and CloudFront integration to support secure frontend-to-API communication.
+
+Technologies:
+AWS Lambda • API Gateway • Amazon SES • CloudFront • Python • Serverless Architecture
+
+Technologies & Services
+AWS Lambda
+Amazon API Gateway
+Amazon Cognito
+Amazon DynamoDB
+Amazon S3
+Amazon CloudFront
+AWS WAF
+Amazon SES
+IAM
+Terraform
+GitHub Actions
+Python
+JavaScript
+Cloudflare
+Engineering Principles
+
+Projects in this repository emphasize:
+
+Secure-by-default architecture
+Least-privilege IAM design
+Event-driven serverless systems
+Infrastructure automation
+Cloud-native scalability
+Operational visibility and monitoring
+Edge security and HTTPS enforcement
+Repository Structure
+/cloud-security-portfolio
+│── README.md
+│── frontend/
+About
+
+Cloud Engineer & Security-Focused Backend Developer building secure cloud-native systems using AWS serverless technologies, infrastructure automation, and cloud security best practices.
