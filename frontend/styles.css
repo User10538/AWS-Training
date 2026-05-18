@@ -531,24 +531,22 @@ section {
    SECTION SYSTEM
 ========================================= */
 
-.section-header {
-  text-align: center;
+.skills-section {
+  padding: 2rem 0;
+}
 
-  margin-bottom: 70px;
+.section-header {
+  margin-bottom: 0.75rem;
 }
 
 .section-label {
-  color: #93c5fd;
+  margin: 0;
+  line-height: 1;
+}
 
-  font-size: 0.75rem;
-
-  letter-spacing: 0.18em;
-
-  text-transform: uppercase;
-
-  margin-bottom: 14px;
-
-  font-weight: 600;
+.section-header h2 {
+  margin: 0.25rem 0 0 0;
+  line-height: 1.1;
 }
 
 /* =========================================
